@@ -79,7 +79,7 @@ object Huffman {
    *       println("integer is  : "+ theInt)
    *   }
    */
-  def times(chars: List[Char]): List[(Char, Int)] = = {
+  def times(chars: List[Char]): List[(Char, Int)] =  {
     if ( chars.isEmpty ) List()
     else List.concat(List((chars.head, chars.count(chars.head == ) )), times(chars.tail.filter(chars.head !=)))
   }
@@ -91,7 +91,7 @@ object Huffman {
    * head of the list should have the smallest weight), where the weight
    * of a leaf is the frequency of the character.
    */
-  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] {
+  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = {
     val sortedFreqs = freqs.sortBy(_._2)
 
     def makeLeaf(sorted: List[(Char, Int)]) : List[Leaf] = {
@@ -105,7 +105,7 @@ object Huffman {
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-  def singleton(trees: List[CodeTree]): Boolean = trees.length ==1
+  def singleton(trees: List[CodeTree]): Boolean = trees.length == 1
 
   /**
    * The parameter `trees` of this function is a list of code trees ordered
@@ -282,4 +282,4 @@ object Huffman {
     _qencode(codeTable,text,List())
   }
 }
-}
+
